@@ -1,58 +1,96 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Créer un compte</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Inscription - EngageTaVille</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-top: 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
-<body class="bg-gray-100">
-    <div class="min-h-screen flex items-center justify-center">
-        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-            <h2 class="text-2xl font-bold mb-6 text-center">Créez votre compte</h2>
-            <p class="mb-6 text-center text-gray-600">Créez votre compte en quelques clics en renseignant vos informations de base. Notre système d'inscription nécessite une vérification d'identité pour garantir que chaque utilisateur est un résident de la commune.</p>
-            <form>
-                <div class="mb-4">
-                    <label for="name" class="block text-gray-700">Nom complet</label>
-                    <input type="text" id="name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Votre nom complet">
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-gray-700">Adresse e-mail</label>
-                    <input type="email" id="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Votre adresse e-mail">
-                </div>
-                <div class="mb-4">
-                    <label for="password" class="block text-gray-700">Mot de passe</label>
-                    <input type="password" id="password" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Votre mot de passe">
-                </div>
-                <div class="mb-4">
-                    <label for="confirm-password" class="block text-gray-700">Confirmez le mot de passe</label>
-                    <input type="password" id="confirm-password" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Confirmez votre mot de passe">
-                </div>
-                <div class="mb-4">
-                    <label for="address" class="block text-gray-700">Adresse</label>
-                    <input type="text" id="address" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Votre adresse">
-                </div>
-                <div class="mb-4">
-                    <label for="city" class="block text-gray-700">Ville</label>
-                    <input type="text" id="city" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Votre ville">
-                </div>
-                <div class="mb-4">
-                    <label for="postal-code" class="block text-gray-700">Code postal</label>
-                    <input type="text" id="postal-code" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Votre code postal">
-                </div>
-                <div class="mb-4">
-                    <label for="identity-verification" class="block text-gray-700">Vérification d'identité</label>
-                    <input type="file" id="identity-verification" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                </div>
-                <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Créer un compte</button>
-            </form>
-        </div>
+<body>
+    <header>
+        <h1>Inscription à EngageTaVille</h1>
+    </header>
+    <div class="container">
+        <h2>Créez votre compte</h2>
+        <form action="submit_inscription.php" method="POST">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="motdepasse">Mot de passe :</label>
+            <input type="password" id="motdepasse" name="motdepasse" required>
+
+            <label for="localisation">Localisation :</label>
+            <input type="text" id="localisation" name="localisation" required>
+
+            <input type="submit" value="S'inscrire">
+        </form>
     </div>
+    <footer>
+        <p>© 2023 EngageTaVille. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
