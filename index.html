@@ -11,27 +11,28 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #e9f1f7; /* Couleur de fond douce */
         }
         header {
-            background-color: #4CAF50;
+            background-color: #003366; /* Bleu foncé */
             color: white;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
             text-align: center;
         }
         nav {
             display: flex;
             justify-content: center;
-            background-color: #333;
+            background-color: #00509e; /* Bleu moyen */
         }
         nav a {
             color: white;
-            padding: 1rem;
+            padding: 1rem 1.5rem;
             text-decoration: none;
             text-transform: uppercase;
+            transition: background-color 0.3s;
         }
         nav a:hover {
-            background-color: #575757;
+            background-color: #007acc; /* Bleu clair au survol */
         }
         .container {
             max-width: 1200px;
@@ -47,48 +48,53 @@
         }
         .feature h2 {
             margin-top: 0;
+            color: #003366; /* Bleu foncé pour les titres */
         }
         footer {
-            background-color: #333;
+            background-color: #003366; /* Bleu foncé */
             color: white;
             text-align: center;
             padding: 1rem 0;
+        }
+        .sub-section {
+            margin-top: 1rem;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>EngageTaVille</h1>
-        <p>Bienvenue sur EngageTaVille, la plateforme participative qui vous permet de prendre part à la vie de votre commune de façon simple et efficace !</p>
+        <p>Bienvenue sur EngageTaVille, la plateforme participative pour améliorer votre commune !</p>
     </header>
     <nav>
         <a href="#inscription">Inscription</a>
-        <a href="#localisation">Localisation</a>
-        <a href="#creation-taches">Création de Tâches</a>
-        <a href="#vote">Système de Vote</a>
-        <a href="#suivi">Suivi des Progrès</a>
-        <a href="#forum">Forum</a>
-        <a href="#accessibilite">Accessibilité</a>
+        <a href="#connexion">Connexion</a>
+        <a href="#ma-ville">Ma Ville</a>
+        <a href="#forums">Forums</a>
     </nav>
     <div class="container">
         <div class="feature" id="inscription">
-            <h2>Inscription facile et rapide</h2>
+            <h2>Inscription</h2>
             <p>Créez votre compte en quelques clics en renseignant vos informations de base. Notre système d'inscription nécessite une vérification d'identité pour garantir que chaque utilisateur est un résident de la commune.</p>
         </div>
-        <div class="feature" id="localisation">
-            <h2>Localisation précise</h2>
-            <p>En vous inscrivant, vous pourrez indiquer votre localisation afin de vous connecter avec d'autres utilisateurs de votre quartier. Cela permet des échanges plus pertinents et des propositions ciblées sur votre secteur.</p>
+        <div class="feature" id="connexion">
+            <h2>Connexion</h2>
+            <p>Connectez-vous à votre compte pour accéder à toutes les fonctionnalités de la plateforme et participer activement.</p>
         </div>
-        <div class="feature" id="creation-taches">
-            <h2>Création de tâches/requêtes</h2>
-            <p>Proposez vos idées et suggestions d'amélioration pour votre mairie. Que ce soit une demande d'entretien d'un parc, l'ajout de nouveaux équipements sportifs ou des changements dans les horaires de collecte des déchets, chaque proposition compte !</p>
+        <div class="feature" id="ma-ville">
+            <h2>Ma Ville</h2>
+            <div class="sub-section">
+                <h3>Créer un appel à l'action</h3>
+                <p>Proposez vos idées et suggestions d'amélioration pour votre mairie. Chaque proposition compte !</p>
+            </div>
+            <div class="sub-section">
+                <h3>Consulter les appels à l'action</h3>
+                <p>Consultez les propositions soumises par d'autres utilisateurs et votez pour celles qui vous tiennent à cœur.</p>
+            </div>
         </div>
-        <div class="feature" id="vote">
-            <h2>Système de vote</h2>
-            <p>Une fois les tâches soumises, les utilisateurs peuvent voter pour celles qui leur tiennent le plus à cœur. Le système de vote permet de prioriser les demandes et d'identifier les enjeux majeurs pour la communauté.</p>
+        <div class="feature" id="forums">
+            <h2>Forums</h2>
+            <p>Échangez avec d’autres utilisateurs, partagez vos idées et participez à des discussions sur des sujets d'intérêt commun.</p>
         </div>
-        <div class="feature" id="suivi">
-            <h2>Suivi des progrès</h2>
-            <p>Restez informé de l’état d’avancement des requêtes que vous avez soutenues. Vous recevrez des notifications sur les décisions prises par la mairie et les actions mises en place suite aux votes des citoyens.</p>
-        </div>
-        <div class="
+    </div>
+    <footer>
