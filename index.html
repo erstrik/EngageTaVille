@@ -31,6 +31,7 @@
             text-decoration: none;
             text-transform: uppercase;
             transition: background-color 0.3s;
+            position: relative; /* Position relative pour le dropdown */
         }
         nav a:hover {
             background-color: #007acc; /* Bleu clair au survol */
@@ -51,7 +52,7 @@
         .dropdown a:hover {
             background-color: #007acc; /* Bleu clair au survol */
         }
-        nav .ma-ville:hover .dropdown {
+        .ma-ville:hover .dropdown {
             display: block; /* Afficher le menu déroulant au survol */
         }
         .container {
@@ -109,4 +110,5 @@
         </div>
         <div class="feature" id="ma-ville">
             <h2>Ma Ville</h2>
-            <div
+            <div class="sub-section">
+                <
