@@ -23,6 +23,7 @@
             display: flex;
             justify-content: center;
             background-color: #00509e; /* Bleu moyen */
+            position: relative;
         }
         nav a {
             color: white;
@@ -33,6 +34,25 @@
         }
         nav a:hover {
             background-color: #007acc; /* Bleu clair au survol */
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #00509e; /* Bleu moyen */
+            top: 100%; /* Pour positionner juste en dessous du lien */
+            left: 0;
+            width: 100%; /* Prendre toute la largeur du parent */
+            z-index: 1;
+        }
+        .dropdown a {
+            padding: 0.5rem 1.5rem;
+            display: block;
+        }
+        .dropdown a:hover {
+            background-color: #007acc; /* Bleu clair au survol */
+        }
+        nav .ma-ville:hover .dropdown {
+            display: block; /* Afficher le menu déroulant au survol */
         }
         .container {
             max-width: 1200px;
@@ -69,7 +89,13 @@
     <nav>
         <a href="#inscription">Inscription</a>
         <a href="#connexion">Connexion</a>
-        <a href="#ma-ville">Ma Ville</a>
+        <div class="ma-ville">
+            <a href="#ma-ville">Ma Ville</a>
+            <div class="dropdown">
+                <a href="#creer-appel">Créer un appel à l'action</a>
+                <a href="#consulter-appels">Consulter les appels à l'action</a>
+            </div>
+        </div>
         <a href="#forums">Forums</a>
     </nav>
     <div class="container">
@@ -83,18 +109,4 @@
         </div>
         <div class="feature" id="ma-ville">
             <h2>Ma Ville</h2>
-            <div class="sub-section">
-                <h3>Créer un appel à l'action</h3>
-                <p>Proposez vos idées et suggestions d'amélioration pour votre mairie. Chaque proposition compte !</p>
-            </div>
-            <div class="sub-section">
-                <h3>Consulter les appels à l'action</h3>
-                <p>Consultez les propositions soumises par d'autres utilisateurs et votez pour celles qui vous tiennent à cœur.</p>
-            </div>
-        </div>
-        <div class="feature" id="forums">
-            <h2>Forums</h2>
-            <p>Échangez avec d’autres utilisateurs, partagez vos idées et participez à des discussions sur des sujets d'intérêt commun.</p>
-        </div>
-    </div>
-    <footer>
+            <div
